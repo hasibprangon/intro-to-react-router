@@ -10,6 +10,7 @@ import About from './components/about/About.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Home from './components/home/Home.jsx';
 import First from './components/first/First.jsx';
+import Friends from './components/friends/Friends.jsx';
 
 
 
@@ -30,12 +31,17 @@ import First from './components/first/First.jsx';
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Home></Home>,
+    path: '/',
+    element: <Home></Home>,
     children: [
       {
         path: '/',
         element: <First></First>
+      },
+      {
+        path:'friends',
+        element: <Friends></Friends>,
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users')
       },
       {
         path: 'about',
@@ -43,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'contact',
-        element:<Contact></Contact>
+        element: <Contact></Contact>
       }
     ]
   }
@@ -51,8 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider 
-    router={router}
+    <RouterProvider
+      router={router}
     ></RouterProvider>
   </React.StrictMode>,
 )
