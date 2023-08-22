@@ -9,6 +9,7 @@ import {
 import About from './components/about/About.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Home from './components/home/Home.jsx';
+import First from './components/first/First.jsx';
 
 
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     path:'/',
     element:<Home></Home>,
     children: [
+      {
+        path: '/',
+        element: <First></First>
+      },
       {
         path: 'about',
         element: <About></About>
