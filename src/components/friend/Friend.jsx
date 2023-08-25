@@ -9,8 +9,7 @@ const Friend = ({friend}) => {
             <h2>{name}</h2>
             <p>Phone Number:{phone}</p>
             <p className='truncate hover:text-clip'>Email:{email}</p>
-            <p>Web:{website}</p>
-            <p><Link to={`/friend/:${id}`} className='font-bold hover:bg-cyan-700 '>Show me Details</Link></p>
+            <p><Link to={`/friend/${id}`} className='font-bold hover:bg-cyan-700 '>Show me Details</Link></p>
         </div>
     );
 };

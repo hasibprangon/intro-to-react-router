@@ -5,9 +5,10 @@ const Header = () => {
     return (
         <nav className='font-bold text-blue-600'>
             <Link to="/">Home</Link>
-            <Link to="friends">Friends</Link>
-            <Link to="about">About </Link>
-            <Link to="contact">Contact</Link>
+            <Link to="/friends">Friends</Link>
+            <Link to="/posts">Posts</Link>
+            <Link to="/about">About </Link>
+            <Link to="/contact">Contact</Link>
         </nav>
     );
 };
