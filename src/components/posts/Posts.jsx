@@ -4,7 +4,7 @@ import Post from '../post/Post';
 
 const Posts = () => {
     const posts = useLoaderData();
-    console.log(posts);
+    // console.log(posts);
     return (
         <div  className='grid grid-cols-4 gap-4'>
            
