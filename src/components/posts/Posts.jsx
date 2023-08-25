@@ -6,7 +6,7 @@ const Posts = () => {
     const posts = useLoaderData();
     // console.log(posts);
     return (
-        <div  className='grid grid-cols-4 gap-4'>
+        <div  className='grid grid-cols-4 gap-4 mt-4'>
            
             {
                 posts.map(post => <Post 
